@@ -1,0 +1,45 @@
+{
+  "name": "@company/node-package",
+  "version": "0.0.0",
+  "description": "A Node.js package.",
+  "keywords": [
+    "node",
+    "lib"
+  ],
+  "author": "moon",
+  "license": "MIT",
+  "repository": "https://github.com/moonrepo/examples",
+  "packemon": {
+    "format": "lib",
+    "platform": "node"
+  },
+  "engines": {
+    "node": ">=16.12.0",
+    "npm": ">=6.14.0"
+  },
+  "files": [
+    "lib/**/*",
+    "src/**/*"
+  ],
+  "types": "./lib/index.d.ts",
+  "main": "./lib/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./lib/*.d.ts",
+      "node": {
+        "types": "./lib/*.d.ts",
+        "default": "./lib/*.js"
+      },
+      "default": "./lib/*.js"
+    },
+    ".": {
+      "types": "./lib/index.d.ts",
+      "node": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      },
+      "default": "./lib/index.js"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Cache
+.eslintcache
+.idea
+.npm
+.vscode
+
+# Directories
+build/
+coverage/
+cjs/
+dist/
+dts/
+esm/
+lib/
+mjs/
+tmp/
+umd/
+node_modules/
+
+# Custom
+*.min.js
+*.map
+*.tsbuildinfo
+
+# moon
+.moon/cache
+.moon/dts
+.moon/docker
+
+# Apps
+.output/
+.svelte-kit/
+.vercel/

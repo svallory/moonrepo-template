@@ -1,0 +1,42 @@
+type: 'application'
+
+fileGroups:
+  app:
+    - 'astro.config.*'
+
+tasks:
+  astro:
+    command: 'astro'
+    local: true
+
+  dev:
+    command: 'astro dev'
+    local: true
+
+  build:
+    command: 'astro build'
+    inputs:
+      - '@group(app)'
+      - '@group(sources)'
+    outputs:
+      - 'dist'
+
+  check:
+    command: 'astro check'
+    inputs:
+      - '@group(app)'
+      - '@group(sources)'
+    deps:
+      - 'typecheck'
+
+  preview:
+    command: 'astro preview'
+    deps:
+      - 'build'
+    local: true
+
+  # Extends the top-level lint
+  lint:
+    args:
+      - '--ext'
+      - '.ts,.tsx,.astro'

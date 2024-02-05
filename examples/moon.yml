@@ -1,0 +1,17 @@
+type: 'library'
+language: 'typescript'
+
+tags:
+  - packemon
+  - vite
+  - vitest
+
+tasks:
+  build:
+    outputs:
+      - "cjs"
+      - 'esm'
+      - 'lib'
+  build-release:
+    outputs:
+      - "esm"

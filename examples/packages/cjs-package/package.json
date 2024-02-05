@@ -1,0 +1,45 @@
+{
+  "name": "@company/cjs-package",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "description": "A Node.js CJS package.",
+  "keywords": [
+    "node",
+    "cjs"
+  ],
+  "author": "moon",
+  "license": "MIT",
+  "repository": "https://github.com/moonrepo/examples",
+  "packemon": {
+    "format": "cjs",
+    "platform": "node",
+    "inputs": {
+      "index": "src/index.cts"
+    }
+  },
+  "engines": {
+    "node": ">=16.12.0"
+  },
+  "files": [
+    "cjs/**/*",
+    "src/**/*"
+  ],
+  "types": "./cjs/index.d.cts",
+  "main": "./cjs/index.cjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "node": {
+        "types": "./cjs/*.d.ts",
+        "require": "./cjs/*.cjs"
+      }
+    },
+    ".": {
+      "node": {
+        "types": "./cjs/index.d.cts",
+        "import": "./cjs/index-wrapper.mjs",
+        "require": "./cjs/index.cjs"
+      }
+    }
+  }
+}

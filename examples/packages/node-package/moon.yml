@@ -1,0 +1,6 @@
+type: 'library'
+
+tasks:
+  build:
+    outputs:
+      - 'lib'

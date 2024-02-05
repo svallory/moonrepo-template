@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/apps/astro-app",
+    "emitDeclarationOnly": false,
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "references": [
+    {
+      "path": "../../packages/browser-package"
+    }
+  ]
+}
