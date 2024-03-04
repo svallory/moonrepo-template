@@ -1,28 +1,13 @@
-$schema: "https://moonrepo.dev/schemas/workspace.json"
+$schema: 'https://moonrepo.dev/schemas/workspace.json'
 
-# Require a specific version of moon while running commands, otherwise fail.
-versionConstraint: ">=1.16.0"
+##################################################################################
+# NOTE:
+# If you created this repository based on the template at https://github.com/svallory/moonrepo-template
+# You can should pick one of the options below
+##################################################################################
 
-# Extend and inherit an external configuration file. Must be a valid HTTPS URL or file system path.
-# extends: './shared/workspace.yml'
+# Extend the template configuration and delete the local `workspace-base.yml` to avoid confusion
+extends: 'https://raw.githubusercontent.com/svallory/moonrepo-template/master/.moon/workspace-base.yml'
 
-# REQUIRED: A map of all projects found within the workspace, or a list or file system globs.
-# When using a map, each entry requires a unique project ID as the map key, and a file system
-# path to the project folder as the map value. File paths are relative from the workspace root,
-# and cannot reference projects located outside the workspace boundary.
-projects:
-  - "apps/*"
-  - "libs/*"
-  - "packages/*"
-
-vcs:
-  manager: "git"
-  defaultBranch: "main"
-
-runner:
-  archivableTargets:
-    - ":format"
-    - ":lint"
-    - ":test"
-    - ":typecheck"
-  logRunningCommand: true
+# Part ways with the template and use the local file
+# extends: "./workspace-base.yml"
