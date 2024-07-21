@@ -11,3 +11,7 @@ extends: 'https://raw.githubusercontent.com/svallory/moonrepo-template/master/.m
 
 # Part ways with the template and use the local file
 # extends: "./workspace-base.yml"
+
+generator:
+  templates:
+    - git://github.com/svallory/moon-templates#main
