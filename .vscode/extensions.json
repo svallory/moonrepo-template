@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    // Schema validation for yaml files
+    "redhat.vscode-yaml",
+    // Better highlighting and completion for .tera files than the Tera extension
+    "samuelcolvin.jinjahtml",
+    // Enables shared config files for VSCode
+    "swellaby.workspace-config-plus"
+  ]
+}

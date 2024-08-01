@@ -1,0 +1,67 @@
+{
+  // < moon config >
+  // --------------------------------------------------------------------------
+  // Configuration file schemas
+  "yaml.schemas": {
+    "https://moonrepo.dev/schemas/tasks.json": [
+      ".moon/tasks.yml",
+      ".moon/tasks/**/*.yml"
+    ],
+    "https://moonrepo.dev/schemas/project.json": [
+      "**/moon.yml"
+    ],
+    "https://moonrepo.dev/schemas/template.json": [
+      "**/template.yml"
+    ],
+    "https://moonrepo.dev/schemas/workspace.json": [
+      "**/.moon/workspace.yml"
+    ],
+    "https://moonrepo.dev/schemas/toolchain.json": [
+      "**/.moon/toolchain.yml"
+    ]
+  },
+  // templates
+  "files.associations": {
+    "*.yml.tera": "jinja-yaml",
+    "*.md.tera": "jinja-md",
+    "*.json.tera": "jinja-json",
+    "*.tera": "jinja"
+  },
+  // </ moon config >
+  // ==========================================================================
+  //
+  // --------------------------------------------------------------------------
+  // Spell checking ignored words
+  "cSpell.words": [
+    "archivable",
+    "citty",
+    "deno",
+    "moonrepo",
+    "nodenv",
+    "packemon",
+    "proto",
+    "prototools",
+    "svallory",
+    "tagit",
+    "tera",
+    "tokilabs",
+    "tsbuildinfo",
+    "typecheck",
+    "vite",
+    "vitest"
+  ],
+  // __________________________________________________________________________
+  //
+  // Nesting configuration files
+  // see `Configuration Files.md` at the root
+  // --------------------------------------------------------------------------
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".config*": ".git*, prettier.*, babel.*, *config.toml, *config.yaml, *config.yml, *rc, *rc.json, *rc.js, *rc.mjs, *rc.cjs, *rc.ts, *rc.toml, *rc.yaml, *rc.yml, .eslint*, .prettier*, .*",
+    "Configuration Files.md": ".git*, prettier.*, babel.*, *config.toml, *config.yaml, *config.yml, *rc, *rc.json, *rc.js, *rc.mjs, *rc.cjs, *rc.ts, *rc.toml, *rc.yaml, *rc.yml, .eslint*, .prettier*, .*",
+    "*.yml": "${basename}.*.yml"
+  },
+  // ==========================================================================
+  "references.preferredLocation": "peek",
+  "typescript.tsdk": "node_modules/typescript/lib",
+}

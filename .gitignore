@@ -8,7 +8,8 @@ logs/
 .eslintcache
 .idea
 .npm
-.vscode
+.vscode/*
+!.vscode/*.shared.json
 
 # Directories
 build/
