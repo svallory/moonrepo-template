@@ -7,8 +7,8 @@ $schema: 'https://moonrepo.dev/schemas/toolchain.json'
 # You can should pick one of the options below
 ####################################################################################
 
-# Extend the template configuration and delete the local `toolchain-base.yml` to avoid confusion
-extends: 'https://raw.githubusercontent.com/svallory/moonrepo-template/master/.moon/toolchain-base.yml'
+# Extend the template configuration and delete the local `toolchain.base.yml` to avoid confusion
+extends: 'https://raw.githubusercontent.com/svallory/moonrepo-template/master/.moon/toolchain.base.yml'
 
 # Part ways with the template and use the local file
-# extends: './toolchain-base.yml'
+# extends: './toolchain.base.yml'
